@@ -1,115 +1,381 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Website Shop</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Scented Eight | Perfume Shop</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" 
-rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/fontawesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
-<body>
-  <section class="header">
-    <nav>
-      <a href="index.html"><img src="remove bg.png"></a>
-      <div class="nav-links" id="navLinks">
-        <i class="fa fa-times" onclick="closeMenu()"></i>
-        <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Products</a></li>
-          <li><a href="">About</a></li>
-          <li><a href="">Contact</a></li>
-        </ul>
-      </div>
-      <i class="fa fa-bars" onclick="openMenu()"></i>
-    </nav>  
 
-    <div class="text-box">
-      <h1>Welcome to Scented Eight</h1>
-      <p>Discover a fragrance made to match your style, confidence, and presence.<br> Explore our collection and find the scent that makes you unforgettable.
+<body>
+
+<!-- ================= HOME ================= -->
+
+<section class="header" id="home">
+
+<nav>
+
+    <a href="#home">
+        <img src="remove bg.png" alt="Scented Eight Logo">
+    </a>
+
+    <div class="nav-links" id="navLinks">
+
+        <i class="fa-solid fa-xmark close-icon" onclick="closeMenu()"></i>
+
+        <ul>
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#products" onclick="closeMenu()">Products</a></li>
+            <li><a href="#about" onclick="closeMenu()">About</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+
+    </div>
+
+    <i class="fa-solid fa-bars menu-icon" onclick="openMenu()"></i>
+
+</nav>
+
+<div class="text-box">
+
+    <h1>Welcome to Scented Eight</h1>
+
+    <p>
+        Discover a fragrance made to match your style,
+        confidence, and presence.<br>
+        Explore our collection and find the scent
+        that makes you unforgettable.
+    </p>
+
+    <a href="#review" class="hero-btn">
+        Your Scent. Your Story.
+    </a>
+
+</div>
+
+</section>
+
+<!-- ================= PROFILE ================= -->
+
+<section class="profile">
+
+<h2>John Charl Daquigan</h2>
+
+<p class="position">
+    President and CEO of Scented Eight Perfume
 </p>
-      <a href="" class="hero-btn">Your scent. Your story.</a>
-        
-    </section>
-    ----------Javascript----------
-    <script>
-      var navLinks = document.getElementById("navLinks");
-      function openMenu() {
+
+<img src="Logo.jpg" alt="Scented Eight Logo" class="profile-logo">
+
+<p class="tagline">
+    "The Scent You Can't Resist"
+</p>
+
+</section>
+
+<!-- ================= PRODUCTS ================= -->
+
+<section class="products" id="products">
+
+<h2>Our Products</h2>
+
+<p class="section-intro">
+    Discover a fragrance made for every personality and style.
+</p>
+
+<div class="product-container">
+
+    <!-- Moon Night -->
+
+    <article class="product-card">
+
+        <img src="black.jpg" alt="Moon Night perfume bottle">
+
+        <div class="product-info">
+
+            <h3>Moon Night</h3>
+
+            <h4>₱179.00</h4>
+
+            <p>
+                This perfume is designed for men who love a bold,
+                masculine scent. Its long-lasting fragrance can last
+                for at least 8 hours, providing a refreshing,
+                cooling sensation when applied.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- Blue Sky -->
+
+    <article class="product-card">
+
+        <img src="Cool.jpg" alt="Blue Sky perfume bottle">
+
+        <div class="product-info">
+
+            <h3>Blue Sky</h3>
+
+            <h4>₱179.00</h4>
+
+            <p>
+                This perfume is specially made for men who enjoy
+                a slightly sweet scent. Its oil-based formula
+                provides a rich, long-lasting fragrance that stays
+                with you throughout the day.
+            </p>
+
+        </div>
+
+    </article>
+
+
+    <!-- Cherry Blossom -->
+
+    <article class="product-card">
+
+        <img src="Pink.jpg" alt="Cherry Blossom perfume bottle">
+
+        <div class="product-info">
+
+            <h3>Cherry Blossom</h3>
+
+            <h4>₱170.00</h4>
+
+            <p>
+                This perfume is specially made for women who love
+                a floral, feminine scent. Its long-lasting
+                fragrance stays with you throughout the day.
+            </p>
+
+        </div>
+
+    </article>
+
+</div>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about" id="about">
+
+<div class="section-content">
+
+    <h2>About Scented Eight</h2>
+
+    <p>
+        Scented Eight is a perfume brand created to provide
+        fragrances that express personality, confidence,
+        and individuality.
+    </p>
+
+    <p>
+        Our goal is to offer quality and memorable scents
+        that allow everyone to find a fragrance that tells
+        their own story.
+    </p>
+
+</div>
+
+</section>
+
+<!-- ================= REVIEW ================= -->
+
+<section class="review" id="review">
+
+<h2>Your Scent. Your Story.</h2>
+
+<p>
+    Share your experience with Scented Eight.
+</p>
+
+<div class="review-box">
+
+    <h3>Rate Your Experience</h3>
+
+    <div class="stars" id="stars">
+
+        <i class="fa-regular fa-star" data-rating="1"></i>
+        <i class="fa-regular fa-star" data-rating="2"></i>
+        <i class="fa-regular fa-star" data-rating="3"></i>
+        <i class="fa-regular fa-star" data-rating="4"></i>
+        <i class="fa-regular fa-star" data-rating="5"></i>
+
+    </div>
+
+    <p id="ratingText">Choose a rating</p>
+
+    <textarea
+        id="comment"
+        placeholder="Write your comment here..."
+        rows="5"></textarea>
+
+    <button class="submit-btn" onclick="submitReview()">
+        Submit Review
+    </button>
+
+    <p id="reviewMessage"></p>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contact">
+
+<h2>Contact Us</h2>
+
+<p>
+    We'd love to hear from you.
+</p>
+
+<div class="contact-info">
+
+    <p>
+        <i class="fa-solid fa-envelope"></i>
+        scented8@example.com
+    </p>
+
+    <p>
+        <i class="fa-solid fa-phone"></i>
+        +63 912 345 6789
+    </p>
+
+    <p>
+        <i class="fa-solid fa-location-dot"></i>
+        Manila, Philippines
+    </p>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+    © 2026 Scented Eight. All Rights Reserved.
+</p>
+
+<p>
+    "The Scent You Can't Resist"
+</p>
+
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    // Mobile navigation
+
+    var navLinks = document.getElementById("navLinks");
+
+    function openMenu() {
         navLinks.style.right = "0";
-      }
-      function closeMenu() {
-        navLinks.style.right = "-200px";
-      }
-    </script>
+    }
+
+    function closeMenu() {
+        navLinks.style.right = "-100%";
+    }
+
+
+    // Star rating
+
+    var stars = document.querySelectorAll("#stars i");
+    var selectedRating = 0;
+
+    stars.forEach(function(star) {
+
+        star.addEventListener("click", function() {
+
+            selectedRating = Number(this.getAttribute("data-rating"));
+
+            stars.forEach(function(s) {
+
+                var rating = Number(s.getAttribute("data-rating"));
+
+                if (rating <= selectedRating) {
+
+                    s.classList.remove("fa-regular");
+                    s.classList.add("fa-solid");
+
+                } else {
+
+                    s.classList.remove("fa-solid");
+                    s.classList.add("fa-regular");
+
+                }
+
+            });
+
+            document.getElementById("ratingText").textContent =
+                selectedRating + " out of 5 stars";
+
+        });
+
+    });
+
+
+    // Submit review
+
+    function submitReview() {
+
+        var comment = document.getElementById("comment").value.trim();
+        var message = document.getElementById("reviewMessage");
+
+        if (selectedRating === 0) {
+
+            message.textContent = "Please select a star rating.";
+            return;
+
+        }
+
+        if (comment === "") {
+
+            message.textContent = "Please write a comment.";
+            return;
+
+        }
+
+        message.textContent =
+            "Thank you for your review!";
+
+        document.getElementById("comment").value = "";
+
+        selectedRating = 0;
+
+        stars.forEach(function(star) {
+
+            star.classList.remove("fa-solid");
+            star.classList.add("fa-regular");
+
+        });
+
+        document.getElementById("ratingText").textContent =
+            "Choose a rating";
+
+    }
+
+</script>
 
 </body>
 </html>
-
-
-
-
-  <h1>Scented Eight</h1>
-  <p>"The Scent You Can't Resist"</p>
-
-<section>
-  <h2>John Charl Daquigan</h2>
-  <p>President and CEO of the Scented Eight Perfume</p>
-  <img src="Logo.jpg" alt="Logo" class="perfume-image">
-   <style>
-    .perfume-image {
-      width: 200px;
-      height: auto;
-    }
-  </style>
-
-</section>
-<h3>Our Products</h3>
-
-<article>
-  <h4>Moon Night</h4>
-  <p>₱179.00</p>
-  <p>This perfume is designed for men who love a bold, masculine scent.
-    Its long-lasting fragrance can last for at least 8 hours 
-    Providing a refreshing, cooling sensation when applied.</p>
-  <img src="black.jpg" alt="Perfume bottle" class="perfume-image">
-  <style>
-    .perfume-image {
-      width: 200px;
-      height: auto;
-    }
-  </style>
-</article>
-
-<article>
-  <h5>Blue Sky</h5>
-  <p>₱179.00</p>
-  <p>This perfume is specially made for men who enjoy a slightly sweet scent.
-     Its oil-based formula provides a rich, 
-     long-lasting fragrance that stays with you throughout the day.
-</p>
-  <img src="Cool.jpg" alt="cool bottle" class="perfume-image">
-  <style>
-    .perfume-image {
-      width: 200px;
-      height: auto;
-    }
-  </style>
-</article>
-
-<article>
-  <h6>Cherry Blossom</h6>
-  <p>₱170.00</p>
-  <p>This perfume is specially made for women who love a floral, feminine scent. 
-     Its long-lasting fragrance that stays with you throughout the day.
-</p>
-  <img src="Pink.jpg" alt="woman bottle" class="perfume-image">
-  <style>
-    .perfume-image {
-      width: 200px;
-      height: auto;
-    }
-  </style>
-</article>
