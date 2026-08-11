@@ -1,5 +1,58 @@
-<h1>Scented Eight</h1>
-<p>"The Scent You Can't Resist"</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" 
+rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/fontawesome.min.css">
+
+</head>
+<body>
+  <section class="header">
+    <nav>
+      <a href="index.html"><img src="remove bg.png"></a>
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="closeMenu()"></i>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="openMenu()"></i>
+    </nav>  
+
+    <div class="text-box">
+      <h1>Welcome to Scented Eight</h1>
+      <p>Discover a fragrance made to match your style, confidence, and presence.<br> Explore our collection and find the scent that makes you unforgettable.
+</p>
+      <a href="" class="hero-btn">Your scent. Your story.</a>
+        
+    </section>
+    ----------Javascript----------
+    <script>
+      var navLinks = document.getElementById("navLinks");
+      function openMenu() {
+        navLinks.style.right = "0";
+      }
+      function closeMenu() {
+        navLinks.style.right = "-200px";
+      }
+    </script>
+
+</body>
+</html>
+
+
+
+
+  <h1>Scented Eight</h1>
+  <p>"The Scent You Can't Resist"</p>
 
 <section>
   <h2>John Charl Daquigan</h2>
@@ -13,10 +66,10 @@
   </style>
 
 </section>
-<h2>Our Products</h2>
+<h3>Our Products</h3>
 
 <article>
-  <h3>Moon Night</h3>
+  <h4>Moon Night</h4>
   <p>₱179.00</p>
   <p>This perfume is designed for men who love a bold, masculine scent.
     Its long-lasting fragrance can last for at least 8 hours 
@@ -31,7 +84,7 @@
 </article>
 
 <article>
-  <h3>Blue Sky</h3>
+  <h5>Blue Sky</h5>
   <p>₱179.00</p>
   <p>This perfume is specially made for men who enjoy a slightly sweet scent.
      Its oil-based formula provides a rich, 
@@ -47,7 +100,7 @@
 </article>
 
 <article>
-  <h3>Cherry Blossom</h3>
+  <h6>Cherry Blossom</h6>
   <p>₱170.00</p>
   <p>This perfume is specially made for women who love a floral, feminine scent. 
      Its long-lasting fragrance that stays with you throughout the day.
