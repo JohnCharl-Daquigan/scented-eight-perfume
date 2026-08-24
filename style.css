@@ -583,3 +583,56 @@ nav .fa-xmark {
 }
 
 }
+
+/* View Details */
+.view {
+
+}
+
+/* Product img */
+.product-card img {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+/* Product Information */
+.product-info{
+    text-align: center;
+}
+
+/* ==========Table========== */
+.market {
+    margin: 30px auto;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.market th,
+.market td {
+    padding: 12px 25px;
+    border: 1px solid #c88b07;
+    color: #c88b07;
+}
+
+.product-info a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 24px;
+    background-color: #111;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.product-info a:hover {
+    background-color: #c9a227;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shodow: 0 5x 15px rgba(0, 0, 0, 0.2);
+}
