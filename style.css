@@ -584,10 +584,8 @@ nav .fa-xmark {
 
 }
 
-/* View Details */
-.view {
+/* Information */
 
-}
 
 /* Product img */
 .product-card img {
@@ -634,5 +632,5 @@ nav .fa-xmark {
     background-color: #c9a227;
     color: #fff;
     transform: translateY(-3px);
-    box-shodow: 0 5x 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5x 15px rgba(0, 0, 0, 0.2);
 }
