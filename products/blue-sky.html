@@ -77,23 +77,45 @@
 <fieldset>
     <h2>Your Details</h2>
 
-    <label for="name">Name</label>
-    <input type="text" id="name" placeholder="Full Name" required> <br>
-
     <label for="tel">Contact</label>
     <input type="tel" id="phone" placeholder="Phone Number" required> <br>
 
     <label for="email">Email address</label>
     <input type="email" id="email" placeholder="Email" required> <br>
  <br>
-    <textarea id="comment" placeholder="Comment"></textarea>
+
     <select id="payment" required>
         <option value="">Selct Payment Method</option>
         <option value="Cash On Delivery">Cash On Delivery</option>
         <option value="Bank Transfer">Bank Transfer</option>
-    </select>
+    </select> <br>
+
+     <fieldset>
+
+        <legend>Choose Delivery Method:</legend>
+
+            <input type="radio" id="standard-delivery" name="delivery" value="standard" required>
+            <label for="standard-delivery">Standard Delivery</label><br>
+            <input type="radio" id="express-delivery" name="delivery" value="express">
+            <label for="express-delivery">Express Delivery</label><br>
+            <input type="radio" id="store-pickup" name="delivery" value="pickup">
+            <label for="store-pickup">Store Pickup</label>
+                        
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Optional Extras:</legend>
+        <input type="checkbox" id="gift-wrapping" name="extras" value="gift-wrapping">
+        <label for="gift-warpping">Gift Wrapping</label><br>
+
+        <input type="checkbox" id="express-handling" name="extras" value="express-handling">
+        <label for="express-handling">Express Handling</label><br>
+
+    </fieldset>   
     
-    <input type="number" id="quantity" value="1" min="1" required>
+    <input type="number" id="quantity" value="1" min="1" max="20" required>
  
 
     <button class="gold-btn" type="submit">Send</button>
