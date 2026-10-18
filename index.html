@@ -49,7 +49,7 @@
 
     <div class="text-box">
 
-        <h1>Welcome to Scented Eight</h1>
+        <h1 id="shop-name">Welcome to Scented Eight</h1>
 
         <p>
             Discover a fragrance made to match your style,
@@ -87,6 +87,10 @@
 <!-- ================= PRODUCTS ================= -->
 
 <section class="products" id="products">
+    <p>
+    Total products available:
+    <span id="product-count">0</span>
+</p>
 
     <h2>Our Products</h2>
 
@@ -281,108 +285,13 @@
 
 <footer>
 
-    <p>
-        © 2026 Scented Eight. All Rights Reserved.
-    </p>
-
-    <p>
-        "The Scent You Can't Resist"
-    </p>
+    <p id="copyright"></p>
+    <p>"The Scent You Can't Resist"</p>
 
 </footer>
 
-<!-- ================= JAVASCRIPT ================= -->
 
-<script>
-
-var navLinks = document.getElementById("navLinks");
-
-function openMenu() {
-    navLinks.style.right = "0";
-}
-
-function closeMenu() {
-    navLinks.style.right = "-100%";
-}
-
-
-/* Star rating */
-
-var stars = document.querySelectorAll("#stars i");
-var selectedRating = 0;
-
-stars.forEach(function(star) {
-
-    star.addEventListener("click", function() {
-
-        selectedRating = Number(this.getAttribute("data-rating"));
-
-        stars.forEach(function(s) {
-
-            var rating = Number(s.getAttribute("data-rating"));
-
-            if (rating <= selectedRating) {
-
-                s.classList.remove("fa-regular");
-                s.classList.add("fa-solid");
-
-            } else {
-
-                s.classList.remove("fa-solid");
-                s.classList.add("fa-regular");
-
-            }
-
-        });
-
-        document.getElementById("ratingText").textContent =
-            selectedRating + " out of 5 stars";
-
-    });
-
-});
-
-
-/* Submit review */
-
-function submitReview() {
-
-    var comment = document.getElementById("reviewComment").value.trim();
-    var message = document.getElementById("reviewMessage");
-
-    if (selectedRating === 0) {
-
-        message.textContent = "Please select a star rating.";
-        return;
-
-    }
-
-    if (comment === "") {
-
-        message.textContent = "Please write a comment.";
-        return;
-
-    }
-
-    message.textContent = "Thank you for your review!";
-
-    document.getElementById("reviewComment").value = "";
-
-    selectedRating = 0;
-
-    stars.forEach(function(star) {
-
-        star.classList.remove("fa-solid");
-        star.classList.add("fa-regular");
-
-    });
-
-    document.getElementById("ratingText").textContent =
-        "Choose a rating";
-
-}
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
