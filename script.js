@@ -6,50 +6,80 @@ const currentYear = new Date().getFullYear();
 
 let runningTotal = 0;
 
+document.getElementById("shop-name").textContent =
+    "Welcome to " + shopName;
 
-/* ================= SHOP NAME ================= */
-
-const shopNameElement = document.getElementById("shop-name");
-
-if (shopNameElement) {
-    shopNameElement.textContent = "Welcome to " + shopName;
-}
-
-
-/* ================= COPYRIGHT ================= */
-
-const copyrightElement = document.getElementById("copyright");
-
-if (copyrightElement) {
-    copyrightElement.textContent =
-        `© ${currentYear} ${shopName}. All Rights Reserved.`;
-}
+document.getElementById("copyright").textContent =
+    `© ${currentYear} ${shopName}. All Rights Reserved.`;
 
 
 /* ================= PRODUCT CALCULATION ================= */
 
-// Prices of the three products
 const productPrices = [179, 179, 170];
 
-// Count the products
 const productCount = productPrices.length;
-const productCountElement = document.getElementById("product-count");
 
-if (productCountElement) {
-    productCountElement.textContent = productCount;
-}
-
-// Calculate the total value of all products
 for (const price of productPrices) {
     runningTotal += price;
 }
 
-// Display the calculated total
-const totalValueElement = document.getElementById("total-value");
+document.getElementById("product-count").textContent = productCount;
 
-if (totalValueElement) {
-    totalValueElement.textContent = "₱" + runningTotal.toFixed(2);
+document.getElementById("total-value").textContent =
+    "₱" + runningTotal.toFixed(2);
+
+
+/* ================= STOCK STATUS ================= */
+
+const stockCount = 8;
+const stockStatus = document.getElementById("stock-status");
+
+if (stockCount > 10) {
+    stockStatus.textContent = "In stock";
+} else if (stockCount > 0 && stockCount <= 10) {
+    stockStatus.textContent = "Only a few left";
+} else if (stockCount === 0) {
+    stockStatus.textContent = "Sold out";
+} else {
+    stockStatus.textContent = "Invalid stock count";
 }
+
+
+/* ================= FREE DELIVERY ================= */
+
+// Example order information
+const orderTotal = 500;
+const isMember = true;
+
+// Both conditions must be true for free delivery
+const qualifiesForFreeDelivery =
+    orderTotal >= 500 && isMember === true;
+
+// Ternary operator chooses the delivery fee
+const deliveryFee = qualifiesForFreeDelivery ? 0 : 150;
+
+const finalTotal = orderTotal + deliveryFee;
+
+document.getElementById("order-total").textContent =
+    orderTotal.toFixed(2);
+
+document.getElementById("membership-status").textContent =
+    isMember === true ? "Member" : "Non-member";
+
+document.getElementById("delivery-fee").textContent =
+    deliveryFee.toFixed(2);
+
+document.getElementById("final-total").textContent =
+    finalTotal.toFixed(2);
+
+
+/* ================= SHOP OPEN OR CLOSED ================= */
+
+const isShopOpen = true;
+
+const shopStatus = isShopOpen ? "Open today" : "Closed today";
+
+document.getElementById("shop-status").textContent = shopStatus;
 
 
 /* ================= CONSOLE LOGS ================= */
@@ -58,6 +88,10 @@ console.log("Shop Name:", shopName);
 console.log("Current Year:", currentYear);
 console.log("Running Total:", runningTotal);
 console.log("Product Count:", productCount);
+console.log("Stock Status:", stockStatus.textContent);
+console.log("Free Delivery:", qualifiesForFreeDelivery);
+console.log("Final Total:", finalTotal);
+console.log("Shop Status:", shopStatus);
 
 
 /* ================= NAVIGATION MENU ================= */
@@ -107,7 +141,9 @@ stars.forEach(function(star) {
 /* ================= SUBMIT REVIEW ================= */
 
 function submitReview() {
-    const comment = document.getElementById("reviewComment").value.trim();
+    const comment =
+        document.getElementById("reviewComment").value.trim();
+
     const message = document.getElementById("reviewMessage");
 
     if (selectedRating === 0) {
@@ -123,6 +159,7 @@ function submitReview() {
     message.textContent = "Thank you for your review!";
 
     document.getElementById("reviewComment").value = "";
+
     selectedRating = 0;
 
     stars.forEach(function(star) {
@@ -137,9 +174,13 @@ function submitReview() {
 
 /* ================= CUSTOMER INFORMATION ================= */
 
-function customerInfo(event) {
-    event.preventDefault();
-    alert("Thank you! Your information has been submitted.");
+const customerForm = document.getElementById("customerForm");
 
-    event.target.reset();
-}
+customerForm.addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    document.getElementById("customerMessage").textContent =
+        "Thank you! Your information has been submitted.";
+
+    customerForm.reset();
+});

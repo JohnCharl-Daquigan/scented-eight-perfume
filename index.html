@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,30 +26,25 @@
 <section class="header" id="home">
 
     <nav>
-
         <a href="#home">
             <img src="remove bg.png" alt="Scented Eight Logo">
         </a>
 
         <div class="nav-links" id="navLinks">
-
             <i class="fa-solid fa-xmark close-icon" onclick="closeMenu()"></i>
 
             <ul>
                 <li><a href="index.html" onclick="closeMenu()">Home</a></li>
-                <li><a href="index.html#products" onclick="closeMenu()">Products</a></li>
-                <li><a href="index.html#about" onclick="closeMenu()">About</a></li>
-                <li><a href="index.html#contact" onclick="closeMenu()">Contact</a></li>
+                <li><a href="#products" onclick="closeMenu()">Products</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
             </ul>
-
         </div>
 
         <i class="fa-solid fa-bars menu-icon" onclick="openMenu()"></i>
-
     </nav>
 
     <div class="text-box">
-
         <h1 id="shop-name">Welcome to Scented Eight</h1>
 
         <p>
@@ -58,10 +54,7 @@
             that makes you unforgettable.
         </p>
 
-        <a href="#review" class="hero-btn">
-            Your Scent. Your Story.
-        </a>
-
+        <a href="#review" class="hero-btn">Your Scent. Your Story.</a>
     </div>
 
 </section>
@@ -69,7 +62,6 @@
 <!-- ================= PROFILE ================= -->
 
 <section class="profile">
-
     <h2>John Charl Daquigan</h2>
 
     <p class="position">
@@ -78,19 +70,12 @@
 
     <img src="Logo.jpg" alt="Scented Eight Logo" class="profile-logo">
 
-    <p class="tagline">
-        "The Scent You Can't Resist"
-    </p>
-
+    <p class="tagline">"The Scent You Can't Resist"</p>
 </section>
 
 <!-- ================= PRODUCTS ================= -->
 
 <section class="products" id="products">
-    <p>
-    Total products available:
-    <span id="product-count">0</span>
-</p>
 
     <h2>Our Products</h2>
 
@@ -98,55 +83,83 @@
         Discover a fragrance made for every personality and style.
     </p>
 
+    <p>
+        Total products available: <span id="product-count">0</span>
+    </p>
+
+    <p>
+        Total value of all products: <span id="total-value">₱0.00</span>
+    </p>
+
     <div class="product-container">
 
         <article class="product-card">
-
             <img src="black.jpg" alt="Moon Night perfume bottle">
 
             <div class="product-info">
-
                 <h3>Moon Night</h3>
                 <h4>₱179.00</h4>
                 <p>Perfume for Men, who love a bold and masculine scent</p>
-
                 <a href="products/moon-knight.html">View Details</a>
-
             </div>
-
         </article>
 
         <article class="product-card">
-
             <img src="Cool.jpg" alt="Blue Sky perfume bottle">
 
             <div class="product-info">
-
                 <h3>Blue Sky</h3>
                 <h4>₱179.00</h4>
                 <p>Oil-based perfume</p>
-
                 <a href="products/blue-sky.html">View Details</a>
-
             </div>
-
         </article>
 
         <article class="product-card">
-
             <img src="Pink.jpg" alt="Cherry Blossom perfume bottle">
 
             <div class="product-info">
-
                 <h3>Cherry Blossom</h3>
                 <h4>₱170.00</h4>
-                <p>Perfume made for Woman</p>
-
+                <p>Perfume made for women</p>
                 <a href="products/cherry-blossom.html">View Details</a>
-
             </div>
-
         </article>
+
+    </div>
+
+    <!-- ================= SHOP DECISIONS ================= -->
+
+    <div class="shop-status">
+
+        <h2>Shop Information</h2>
+
+        <p>
+            Moon Night Stock:
+            <span id="stock-status">Checking stock...</span>
+        </p>
+
+        <p>
+            Order Total: ₱<span id="order-total">0.00</span>
+        </p>
+
+        <p>
+            Membership:
+            <span id="membership-status">Checking...</span>
+        </p>
+
+        <p>
+            Delivery Fee: ₱<span id="delivery-fee">0.00</span>
+        </p>
+
+        <p>
+            Final Total: ₱<span id="final-total">0.00</span>
+        </p>
+
+        <p>
+            Shop Schedule:
+            <span id="shop-status">Checking...</span>
+        </p>
 
     </div>
 
@@ -157,7 +170,6 @@
 <section class="about" id="about">
 
     <div class="section-content">
-
         <h2>About Scented Eight</h2>
 
         <p>
@@ -171,7 +183,6 @@
             that allow everyone to find a fragrance that tells
             their own story.
         </p>
-
     </div>
 
 </section>
@@ -182,32 +193,25 @@
 
     <h2>Your Scent. Your Story.</h2>
 
-    <p>
-        Share your experience with Scented Eight.
-    </p>
+    <p>Share your experience with Scented Eight.</p>
 
     <div class="review-box">
 
         <h3>Rate Your Experience</h3>
 
         <div class="stars" id="stars">
-
             <i class="fa-regular fa-star" data-rating="1"></i>
             <i class="fa-regular fa-star" data-rating="2"></i>
             <i class="fa-regular fa-star" data-rating="3"></i>
             <i class="fa-regular fa-star" data-rating="4"></i>
             <i class="fa-regular fa-star" data-rating="5"></i>
-
         </div>
 
         <p id="ratingText">Choose a rating</p>
 
-        <textarea
-            id="reviewComment"
-            placeholder="Write your comment here..."
-            rows="5"></textarea>
+        <textarea id="reviewComment" placeholder="Write your comment here..." rows="5"></textarea>
 
-        <button class="submit-btn" onclick="submitReview()">
+        <button class="submit-btn" type="button" onclick="submitReview()">
             Submit Review
         </button>
 
@@ -223,9 +227,7 @@
 
     <h2>Contact Us</h2>
 
-    <p>
-        We'd love to hear from you.
-    </p>
+    <p>We'd love to hear from you.</p>
 
     <div class="contact-info">
 
@@ -248,14 +250,13 @@
 
 </section>
 
-<!-- ================= INFORMATION ================= -->
+<!-- ================= CUSTOMER INFORMATION ================= -->
 
 <div class="informationModal">
 
-    <form onsubmit="customerInfo(event)">
+    <form id="customerForm">
 
         <fieldset>
-
             <h2>Your Details</h2>
 
             <label for="name">Name</label>
@@ -267,14 +268,11 @@
             <label for="email">Email address</label>
             <input class="email" id="email" type="email" placeholder="Email" required>
 
-            <textarea
-                id="customerComment"
-                placeholder="Comment"></textarea>
+            <textarea id="customerComment" placeholder="Comment"></textarea>
 
-            <button class="gold-btn" type="submit">
-                Send
-            </button>
+            <button class="gold-btn" type="submit">Send</button>
 
+            <p id="customerMessage"></p>
         </fieldset>
 
     </form>
@@ -284,10 +282,8 @@
 <!-- ================= FOOTER ================= -->
 
 <footer>
-
     <p id="copyright"></p>
     <p>"The Scent You Can't Resist"</p>
-
 </footer>
 
 
